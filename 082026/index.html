@@ -1,1 +1,577 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- =========================
+       SEO DASAR
+  ========================== -->
 
+  <!-- GANTI: Judul halaman -->
+  <title>Roblox Shorts - Roblox Indonesia</title>
+
+  <!-- GANTI: Deskripsi halaman -->
+  <meta name="description"
+        content="Roblox Shorts Informasi Kumpulan Video Dari Berisi Tentang Roblox">
+
+  <meta name="robots"
+        content="index, follow, max-image-preview:large">
+
+  <meta name="googlebot"
+        content="index, follow">
+
+  <meta name="theme-color"
+        content="#202124">
+
+
+  <!-- =========================
+       URL HALAMAN
+  ========================== -->
+
+  <!-- GANTI: Sesuai URL halaman -->
+  <link rel="canonical"
+        href="https://robloxindonesia.github.io/robloxshorts/">
+
+
+  <!-- =========================
+       FAVICON
+  ========================== -->
+
+  <link rel="icon"
+        type="image/png"
+        sizes="48x48"
+        href="https://robloxindonesia.github.io/favicon.png">
+
+  <link rel="icon"
+        type="image/svg+xml"
+        href="https://robloxindonesia.github.io/favicon.svg">
+
+  <link rel="apple-touch-icon"
+        href="https://robloxindonesia.github.io/favicon.png">
+
+
+  <!-- =========================
+       OPEN GRAPH
+  ========================== -->
+
+  <meta property="og:type"
+        content="website">
+
+  <!-- GANTI -->
+  <meta property="og:title"
+        content="Roblox Shorts- Roblox Indonesia">
+
+  <!-- GANTI -->
+  <meta property="og:description"
+        content="Roblox Shorts Informasi Kumpulan Video Dari Berisi Tentang Roblox">
+
+  <!-- GANTI -->
+  <meta property="og:url"
+        content="https://robloxindonesia.github.io/robloxshorts/">
+
+  <meta property="og:site_name"
+        content="Roblox Indonesia">
+
+  <meta property="og:image"
+        content="https://robloxindonesia.github.io/favicon.png">
+
+  <meta property="og:locale"
+        content="id_ID">
+
+
+  <!-- =========================
+       TWITTER / X
+  ========================== -->
+
+  <meta name="twitter:card"
+        content="summary">
+
+  <!-- GANTI -->
+  <meta name="twitter:title"
+        content="Roblox Shorts- Roblox Indonesia">
+
+  <!-- GANTI -->
+  <meta name="twitter:description"
+        content="Roblox Shorts Informasi Kumpulan Video Dari Berisi Tentang Roblox">
+
+  <meta name="twitter:image"
+        content="https://robloxindonesia.github.io/favicon.png">
+
+
+  <!-- =========================
+       STRUCTURED DATA
+  ========================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Roblox Shorts- Roblox Indonesia",
+    "description": "Roblox Shorts Informasi Kumpulan Video Dari Berisi Tentang Roblox",
+    "url": "https://robloxindonesia.github.io/robloxshorts/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Roblox Indonesia",
+      "url": "https://robloxindonesia.github.io/"
+    }
+  }
+  </script>
+
+
+  <!-- =========================
+       WEBSITE
+  ========================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Roblox Indonesia",
+    "url": "https://robloxindonesia.github.io/"
+  }
+  </script>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+    scroll-snap-type:y mandatory;
+    background:#000;
+    font-family:Arial,sans-serif;
+}
+
+body::-webkit-scrollbar{
+    display:none;
+}
+
+.shorts{
+    position:relative;
+    width:100%;
+    height:100%;
+    scroll-snap-align:start;
+    overflow:hidden;
+    background:#000;
+}
+
+.video{
+    width:100%;
+    height:100%;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.5),
+        rgba(0,0,0,.1),
+        rgba(0,0,0,.0),
+        rgba(0,0,0,.1),
+        rgba(0,0,0,.5)
+    );
+}
+
+/* TOP */
+.top-bar{
+    position:absolute;
+    top:15px;
+    left:15px;
+    right:15px;
+    z-index:0;
+    display:flex;
+    justify-content:space-between;
+    color:#fff;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.search{
+    font-size:24px;
+}
+
+/* INFO */
+.bottom-info{
+    position:absolute;
+    bottom:5%;
+    left:15px;
+    right:90px;
+    color:white;
+    z-index:0;
+}
+
+.username{
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.caption{
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* SIDE MENU */
+.side-menu{
+    position:absolute;
+    right:12px;
+    bottom:5%;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    z-index:0;
+    color:white;
+}
+
+.menu-btn{
+    text-align:center;
+}
+
+.icon{
+    font-size:28px;
+    margin-bottom:5px;
+}
+
+/* PLAY BUTTON */
+.play-btn{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:60px;
+    color:white;
+    z-index:0;
+    display:flex;
+    cursor:pointer;
+}
+.iklan-roblox {
+    max-width: 50px; /* batas ukuran gambar */
+    width: 100%;
+    height: auto; /* proporsi tetap */
+    border-radius: 10px;
+}
+</style>
+
+<style>
+/* DROPDOWN MENU */
+.sidebar {
+    position:fixed;
+    height:100%;
+    width:0;
+    top:0;
+    left:0;
+    background:white;
+    overflow-x:hidden;    
+    transition:0.3s;
+    box-shadow:2px 0 10px rgba(0,0,0,0.2);
+    padding-top:60px;
+}
+
+.sidebar1 {
+    display:block;
+    padding:15px 25px;
+    text-decoration:none;    
+    color:black;
+    font-size:20px;
+}
+
+.sidebar1 :hover{
+    background:#f1f1f1;
+}
+
+.sidebar1 a{
+    padding:15px 1px;
+    text-decoration:none;        
+    color:black;
+    font-size:20px;
+}
+
+.close-btn1{
+    position:absolute;
+    justify-content:space-between;
+    width:250px;
+    top:10px;
+    right:20px
+    display:flex;
+    padding:5px ;
+    background:#aaaaaa;        
+}
+
+.close-btn{
+    position:absolute;
+    right:30px;
+    font-size:35px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="shorts">
+    <video class="video" loop playsinline>
+        <source src="https://robloxindonesia.github.io/video/Evolusi-WebLogo-Roblox-2004-2024.mp4">
+    </video>
+
+    <div class="overlay"></div>
+    <div class="play-btn">▶</div>
+
+    <div class="bottom-info">
+        <div class="username"><a href="https://www.youtube.com/@roblox_indonesia-com">@roblox_indonesia-com</a></div>
+        <div class="caption">Evolusi Web/Logo Roblox 2004 - 2024</div>
+    </div>
+
+    <div class="side-menu">
+        <div class="menu-btn"><div class="icon">❤</div>103</div>
+        <div class="menu-btn"><div class="icon">💬</div>20</div>
+        <div class="menu-btn"><div class="icon">↗</div>Bagi</div>
+    </div>
+</div>
+
+<div class="shorts">
+    <video class="video" loop playsinline>
+        <source src="https://robloxindonesia.github.io/video/Top%205%20Roblox%20roblox%20indonesia.mp4">
+    </video>
+
+    <div class="overlay"></div>
+    <div class="play-btn">▶</div>
+
+    <div class="bottom-info">
+        <div class="username"><a href="https://www.youtube.com/@roblox_indonesia-com">@roblox_indonesia-com</a></div>
+        <div class="caption">Top 5 Roblox 😂😂😂</div>
+    </div>
+
+    <div class="side-menu">
+        <div class="menu-btn"><div class="icon">❤</div>12K</div>
+        <div class="menu-btn"><div class="icon">💬</div>320</div>
+        <div class="menu-btn"><div class="icon">↗</div>Bagi</div>
+    </div>
+</div>
+
+<div class="shorts">
+    <video class="video" loop playsinline>
+        <source src="https://robloxindonesia.github.io/video/Bener Jadi Admin Di Robloxroblox robloxindonesia indonesia tutorial memes shorts games admin (1280 X 720 60fps).mp4">
+    </video>
+
+    <div class="overlay"></div>
+    <div class="play-btn">▶</div>
+
+    <div class="bottom-info">
+        <div class="username"><a href="https://www.youtube.com/@roblox_indonesia-com">@roblox_indonesia-com</a></div>
+        <div class="caption">Scroll ke bawah untuk video berikutnya ✨</div>
+    </div>
+
+    <div class="side-menu">
+        <div class="menu-btn"><div class="icon">❤</div>8K</div>
+        <div class="menu-btn"><div class="icon">💬</div>320</div>
+        <div class="menu-btn"><div class="icon">↗</div>Bagi</div>
+    </div>
+</div>
+
+<div class="shorts">
+    <video class="video" loop playsinline>
+        <source src="https://robloxindonesia.github.io/video/BUG-R0BLOX-Yang-bikin-ADM1N-Ngamuk-roblox.mp4">
+    </video>
+
+    <div class="overlay"></div>
+    <div class="play-btn">▶</div>
+
+    <div class="bottom-info">
+        <div class="username"><a href="https://www.youtube.com/@shortsacex">@shortsacex</a></div>
+        <div class="caption">BUG R0BLOX Yang bikin ADM1N Ngamuk roblox (Fake)</div>
+    </div>
+
+    <div class="side-menu">
+        <div class="menu-btn"><div class="icon">❤</div>8,7K</div>
+        <div class="menu-btn"><div class="icon">💬</div>1440</div>
+        <div class="menu-btn"><div class="icon">↗</div>Bagi</div>
+    </div>
+</div>
+<div class="shorts">
+    <video class="video" loop playsinline>
+        <source src="https://robloxindonesia.github.io/video/Plus-up-your-game-with-Roblox-Plus.mp4">
+    </video>
+
+    <div class="overlay"></div>
+    <div class="play-btn">▶</div>
+
+    <div class="bottom-info">
+        <div class="username"><a href="https://www.youtube.com/@roblox">@roblox</a></div>
+        <div class="caption">Plus up your game with Roblox Plus</div>
+    </div>
+
+    <div class="side-menu">
+        <div class="menu-btn"><div class="icon">❤</div>230K</div>
+        <div class="menu-btn"><div class="icon">💬</div>0</div>
+        <div class="menu-btn"><div class="icon">↗</div>Bagi</div>
+    </div>
+</div>
+
+<div class="shorts">
+    <video class="video" loop playsinline>
+        <source src="https://robloxindonesia.github.io/video/Inilah-Hacker-Pertama-di-Roblox.mp4">
+    </video>
+
+    <div class="overlay"></div>
+    <div class="play-btn">▶</div>
+
+    <div class="bottom-info">
+        <div class="username"><a href="https://www.youtube.com/@Beak-spider">@Beak-spider</a></div>
+        <div class="caption">Inilah Hacker Pertama di Roblox</div>
+    </div>
+
+    <div class="side-menu">
+        <div class="menu-btn"><div class="icon">❤</div>54K</div>
+        <div class="menu-btn"><div class="icon">💬</div>124</div>
+        <div class="menu-btn"><div class="icon">↗</div>Bagi</div>
+    </div>
+</div>
+
+<div class="shorts">
+    <video class="video" loop playsinline>
+        <source src="https://robloxindonesia.github.io/video/tutorial-cara-verifikasi-umur-tanpa-KTP-tanpa-kontrol-ortu.mp4">
+    </video>
+
+    <div class="overlay"></div>
+    <div class="play-btn">▶</div>
+
+    <div class="bottom-info">
+        <div class="username"><a href="https://www.youtube.com/@Farid_rc">@Farid_rc</a></div>
+        <div class="caption">tutorial cara verifikasi umur tanpa KTP tanpa kontrol ortu</div>
+    </div>
+
+    <div class="side-menu">
+        <div class="menu-btn"><div class="icon">❤</div>752</div>
+        <div class="menu-btn"><div class="icon">💬</div>40</div>
+        <div class="menu-btn"><div class="icon">↗</div>Bagi</div>
+    </div>
+</div>
+
+<div class="shorts">
+    <a href="https://play.google.com/store/apps/details?id=com.roblox.client"><video class="video" loop playsinline>
+        <source src="https://robloxindonesia.github.io/video/Shortened-1920x1080_Katapix_Video_Gameplay_Survival_Escape_Doors_Unlock_ID_15s_01-28-26.mp4">
+    </video>
+
+    <div class="overlay"></div>
+    <div class="play-btn">▶</div>
+
+    <div class="bottom-info">
+        <div class="username">
+            <img class="iklan-roblox"
+src="https://play-lh.googleusercontent.com/7cIIPlWm4m7AGqVpEsIfyL-HW4cQla4ucXnfalMft1TMIYQIlf2vqgmthlZgbNAQoaQ=w480-h960-rw" alt=""> Download Aplikasi Roblox</div>
+        <div class="caption">Roblox adalah dunia virtual terbaik yang memberimu kesempatan berkreasi, berbagi pengalaman virtual dengan teman, dan menjadi apa saja yang dapat kamu...</div>
+    </div>
+
+    <div class="side-menu">
+        <div class="menu-btn"><div class="icon">❤</div>345K</div>
+        <div class="menu-btn"><div class="icon">💬</div>0</div>
+        <div class="menu-btn"><div class="icon">↗</div>Bagi</div>
+    </div>
+    </a>
+</div>
+
+<div class="shorts">
+    <video class="video" loop playsinline>
+        <source src="https://robloxindonesia.github.io/video/Selamat-Dapat-Akun-Admin-Roblox.mp4">
+    </video>
+
+    <div class="overlay"></div>
+    <div class="play-btn">▶</div>
+
+    <div class="bottom-info">
+        <div class="username"><a href="https://www.youtube.com/@roblox_indonesia-com">@Roblox_Indonesia-com</a></div>
+        <div class="caption">Selamat Menemukan Akun Admin Roblox</div>
+    </div>
+
+    <div class="side-menu">
+        <div class="menu-btn"><div class="icon">❤</div>536K</div>
+        <div class="menu-btn"><div class="icon">💬</div>570</div>
+        <div class="menu-btn"><div class="icon">↗</div>Bagi</div>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="logo">Roblox Shorts</div>
+    <div class="search"onclick="openMenu()">☰</div>
+</div>
+
+<div id="menuDropdown" class="sidebar">
+    <div class="close-btn1">
+    <img src="https://robloxindonesia.github.io/img/logo.png" width="100">
+    <span class="close-btn" onclick="closeMenu()">×</span>
+    </div>
+    <a class="sidebar1" href="/home">Home</a>
+    <div class="sidebar1">Roblox Shorts <a href="index5"><-5 </a><a href="index2"> 2-></a></div>
+    <a class="sidebar1" href="#">keadaan koneksi server roblox</a>
+    <a class="sidebar1" href="#">kode² di game roblox</a>
+    <a class="sidebar1" href="#">tutorial di roblox</a>
+    <a class="sidebar1" href="#">karakter terkenal di roblox</a>
+    <a class="sidebar1" href="#">hubungi kami</a>
+    <a class="sidebar1" href="/robloxshorts">Shorts Baru</a>
+</div>
+
+<script>
+const shorts = document.querySelectorAll(".shorts");
+
+shorts.forEach((short, index) => {
+    const video = short.querySelector("video");
+    const playBtn = short.querySelector(".play-btn");
+
+    // video pertama pause saat halaman dibuka
+    if(index === 0){
+        video.pause();
+        playBtn.style.display = "flex";
+    }
+
+    // tap video
+    short.addEventListener("click",()=>{
+        if(video.paused){
+            video.play();
+            playBtn.style.display = "none";
+        }else{
+            video.pause();
+            playBtn.style.display = "flex";
+        }
+    });
+});
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        const video = entry.target.querySelector("video");
+        const playBtn = entry.target.querySelector(".play-btn");
+
+        if(entry.isIntersecting){
+            video.play();
+            playBtn.style.display = "none";
+        }else{
+            video.pause();
+            playBtn.style.display = "flex";
+        }
+    });
+},{
+    threshold:0.75
+});
+    
+shorts.forEach(short=>{
+    observer.observe(short);
+});
+</script>
+
+<script>
+function openMenu(){
+    document.getElementById("menuDropdown").style.width = "250px";
+}
+
+function closeMenu(){
+    document.getElementById("menuDropdown").style.width = "0";
+}
+</script>
+
+</body>
+</html>
