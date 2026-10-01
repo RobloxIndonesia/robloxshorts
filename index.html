@@ -151,9 +151,28 @@
     <a href="08-2026">Shorts Lama</a>
 </div>
 <div class="shorts">
-    <section class="short">
-        <video id="video" playsinline loop preload="auto"></video>
-        <div class="overlay"></div>
+<section class="short">
+
+    <video
+        id="video"
+        playsinline
+        loop
+        preload="auto"
+    ></video>
+
+    <div class="video-progress">
+
+        <div
+            class="video-time"
+            id="videoTime"
+        >
+            0:00 / 0:00
+        </div>
+
+        <div id="progressBar"></div>
+
+    </div>
+    <div class="overlay"></div>
         <div class="top-bar">
 
             <div class="logo">
@@ -171,8 +190,10 @@
         
 <div class="quality-control">
 
-    <button id="orderControl">
-        Acak
+    <button id="orderControl" aria-label="Acak"></button>
+    
+    <button id="speedControl">
+       1×
     </button>
 
     <select
@@ -277,16 +298,6 @@
 <div id="text2" class="copyright"></div>
 
 <script src="/script/halaman-utama.js"></script>
-<script>
-function openMenu(){
-    document.getElementById("menuDropdown").style.width = "250px";
-}
-
-function closeMenu(){
-    document.getElementById("menuDropdown").style.width = "0";
-}
-</script>
-
 <script src="/script/shorts.js"></script>
 </body>
 </html>
